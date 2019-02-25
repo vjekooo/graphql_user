@@ -51,7 +51,7 @@ const main = async () => {
         })
     )
 
-    apolloServer.applyMiddleware({app})
+    apolloServer.applyMiddleware({app, cors: false})
 
     app.listen(4000, () => {
         console.log(`🚀  IT'S AAAAAALIVEEE @ http://localhost:4000${apolloServer.graphqlPath}`)
